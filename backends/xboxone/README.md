@@ -21,8 +21,15 @@ To use these tools, you will need:
  - Xbox One (or One X, One S, Series X, Series S) device in Dev Mode
  - Windows 10 host
  - Visual Studio 2015 Update 3, Visual Studio 2017, or Visual Studio 2019
+   ... **2022+ are _NOT_ known to work!**
  - Windows 10 SDK w/ Universal Windows App Development Tools (UWP)
 
+## Prerequisite installation via chocolatey
+
+```ps1
+choco install visualstudio2019buildtools --package-parameters "--allWorkloads --includeRecommended --includeOptional --passive --locale en-US"
+choco install windows-sdk-10.1
+```
 
 ### Dev Mode Setup
 

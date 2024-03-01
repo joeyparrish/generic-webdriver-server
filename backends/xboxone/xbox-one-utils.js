@@ -362,9 +362,17 @@ function delay(seconds) {
 function findMsbuild() {
   const basePath = 'Program Files (x86)\\Microsoft Visual Studio\\2019';
 
+  // Microsoft's VS docs call these versions of Visual Studio "Offerings".
+  const offerings = [
+    'Enterprise',
+    'Professional',
+    'Community',
+    // This is the path you will have if you install VS via chocolatey:
+    'BuildTools',
+  ];
+
   for (const drive of 'cdefghijklmnopqrstuvwxyz') {
-    // Microsoft's VS docs call these versions of Visual Studio "Offerings".
-    for (const offering of ['Enterprise', 'Professional', 'Community']) {
+    for (const offering of offerings) {
       const vsPath = `${drive}:\\${basePath}\\${offering}`;
       const msbuildPath = `${vsPath}\\MSBuild\\Current\\Bin\\MSBuild.exe`;
       if (fs.existsSync(msbuildPath)) {
