@@ -1,7 +1,7 @@
 {
   "name": "generic-webdriver-server",
   "description": "A generic WebDriver server base class and a Selenium add-on to invoke it.",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "homepage": "https://github.com/shaka-project/generic-webdriver-server",
   "author": "Google",
   "license": "Apache-2.0",
@@ -25,8 +25,8 @@
     "prepack": "cp ../*.md . && npm run lint && npm run checkClean && npm run jar"
   },
   "dependencies": {
-    "express": "^4.19.2",
-    "yargs": "^17.7.2"
+    "express": "^4.17.3",
+    "yargs": "^17.4.0"
   },
   "devDependencies": {
     "eslint": "^8.11.0"
