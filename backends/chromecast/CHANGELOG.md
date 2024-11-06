@@ -1,5 +1,27 @@
 # Changelog
 
+## [3.0.0](https://github.com/joeyparrish/generic-webdriver-server/compare/chromecast-webdriver-server-v2.0.0...chromecast-webdriver-server-v3.0.0) (2024-11-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* **chromecast:** Add v2 receiver app with a redirect mode ([#96](https://github.com/joeyparrish/generic-webdriver-server/issues/96))
+* **chromecast:** Fork receiver app v1 ([#94](https://github.com/joeyparrish/generic-webdriver-server/issues/94))
+
+### Features
+
+* **chromecast:** Add v2 receiver app with a redirect mode ([#96](https://github.com/joeyparrish/generic-webdriver-server/issues/96)) ([5930d76](https://github.com/joeyparrish/generic-webdriver-server/commit/5930d764693a0dc21f8a1c2304a694dd88ec2cf6))
+* **chromecast:** Allow async access to `cast.__platform__` via postMessage ([#84](https://github.com/joeyparrish/generic-webdriver-server/issues/84)) ([8475479](https://github.com/joeyparrish/generic-webdriver-server/commit/8475479f665c182b9beb184ceffd46bddcc6f052))
+* **chromecast:** Fork receiver app v1 ([#94](https://github.com/joeyparrish/generic-webdriver-server/issues/94)) ([a6a7998](https://github.com/joeyparrish/generic-webdriver-server/commit/a6a79986a3ec853c1a5b5fd9b8a3e8f001861298))
+* **chromecast:** Support Google Pixel Tablet ([#77](https://github.com/joeyparrish/generic-webdriver-server/issues/77)) ([6cf553e](https://github.com/joeyparrish/generic-webdriver-server/commit/6cf553ed90fd7c4fe73e7faba2be295455eaeb8a))
+* Instruct Chromecasts to show their serial numbers ([#55](https://github.com/joeyparrish/generic-webdriver-server/issues/55)) ([dca2613](https://github.com/joeyparrish/generic-webdriver-server/commit/dca2613bca83de4f7d70737d32f41010887a7629))
+
+
+### Bug Fixes
+
+* **chromecast:** Speed up shutdown ([#78](https://github.com/joeyparrish/generic-webdriver-server/issues/78)) ([89f4146](https://github.com/joeyparrish/generic-webdriver-server/commit/89f4146d599bda3e93ac83a2d45c1dcb2da6a4e8))
+* Fix yargs compatibility ([#61](https://github.com/joeyparrish/generic-webdriver-server/issues/61)) ([3d44c2d](https://github.com/joeyparrish/generic-webdriver-server/commit/3d44c2d52e5b992d220323b425b1d6229bc3675b))
+
 ## [2.0.0](https://github.com/shaka-project/generic-webdriver-server/compare/chromecast-webdriver-server-v1.3.0...chromecast-webdriver-server-v2.0.0) (2024-05-18)
 
 
