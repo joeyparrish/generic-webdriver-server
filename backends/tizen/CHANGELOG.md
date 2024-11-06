@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.6](https://github.com/joeyparrish/generic-webdriver-server/compare/tizen-webdriver-server-v1.1.5...tizen-webdriver-server-v1.1.6) (2024-11-06)
+
+
+### Bug Fixes
+
+* Fix Tizen cert issues in Docker image ([#59](https://github.com/joeyparrish/generic-webdriver-server/issues/59)) ([81a4bd0](https://github.com/joeyparrish/generic-webdriver-server/commit/81a4bd0f76d66b9e0b62b297cd6377b3e1288ce0)), closes [#57](https://github.com/joeyparrish/generic-webdriver-server/issues/57)
+* **Tizen:** Allow detect screen resolution using ProductInfo API ([#97](https://github.com/joeyparrish/generic-webdriver-server/issues/97)) ([7f79dfe](https://github.com/joeyparrish/generic-webdriver-server/commit/7f79dfe1c2cdb86130f9b29e9aa32b982863cb1c))
+* **tizen:** Fix Docker host permissions ([#52](https://github.com/joeyparrish/generic-webdriver-server/issues/52)) ([92f5311](https://github.com/joeyparrish/generic-webdriver-server/commit/92f5311c40de85c3e9e21a4c391511b9679bf687))
+
 ## [1.1.5](https://github.com/shaka-project/generic-webdriver-server/compare/tizen-webdriver-server-v1.1.4...tizen-webdriver-server-v1.1.5) (2024-05-22)
 
 
