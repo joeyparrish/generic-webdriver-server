@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.5](https://github.com/joeyparrish/generic-webdriver-server/compare/xbox-one-webdriver-server-v1.0.4...xbox-one-webdriver-server-v1.0.5) (2024-11-06)
+
+
+### Bug Fixes
+
+* Regenerate expired XboxOne code-signing certificate ([#38](https://github.com/joeyparrish/generic-webdriver-server/issues/38)) ([61ca821](https://github.com/joeyparrish/generic-webdriver-server/commit/61ca821497279c1640b3aa13d60f725b9f420211))
+* **xbox:** Fix several reliability issues ([#47](https://github.com/joeyparrish/generic-webdriver-server/issues/47)) ([d2cb58a](https://github.com/joeyparrish/generic-webdriver-server/commit/d2cb58a398c502d6311d12d98a48c68abb7a1ad7)), closes [#44](https://github.com/joeyparrish/generic-webdriver-server/issues/44)
+
 ### [1.0.4](https://github.com/shaka-project/generic-webdriver-server/compare/xbox-one-webdriver-server-v1.0.3...xbox-one-webdriver-server-v1.0.4) (2022-03-31)
 
 
