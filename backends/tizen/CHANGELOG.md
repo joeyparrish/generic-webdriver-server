@@ -1,5 +1,23 @@
 # Changelog
 
+## [3.0.0](https://github.com/joeyparrish/generic-webdriver-server/compare/tizen-webdriver-server-v2.0.0...tizen-webdriver-server-v3.0.0) (2024-12-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* **tizen:** Migrate Google Container Registry to GitHub Container Registry ([#99](https://github.com/joeyparrish/generic-webdriver-server/issues/99))
+
+### Features
+
+* **tizen:** Migrate Google Container Registry to GitHub Container Registry ([#99](https://github.com/joeyparrish/generic-webdriver-server/issues/99)) ([8c355ee](https://github.com/joeyparrish/generic-webdriver-server/commit/8c355ee96224f87b2804df16d2064d44826d36b8))
+
+
+### Bug Fixes
+
+* Fix Tizen cert issues in Docker image ([#59](https://github.com/joeyparrish/generic-webdriver-server/issues/59)) ([81a4bd0](https://github.com/joeyparrish/generic-webdriver-server/commit/81a4bd0f76d66b9e0b62b297cd6377b3e1288ce0)), closes [#57](https://github.com/joeyparrish/generic-webdriver-server/issues/57)
+* **Tizen:** Allow detect screen resolution using ProductInfo API ([#97](https://github.com/joeyparrish/generic-webdriver-server/issues/97)) ([7f79dfe](https://github.com/joeyparrish/generic-webdriver-server/commit/7f79dfe1c2cdb86130f9b29e9aa32b982863cb1c))
+* **tizen:** Fix Docker host permissions ([#52](https://github.com/joeyparrish/generic-webdriver-server/issues/52)) ([92f5311](https://github.com/joeyparrish/generic-webdriver-server/commit/92f5311c40de85c3e9e21a4c391511b9679bf687))
+
 ## [2.0.0](https://github.com/shaka-project/generic-webdriver-server/compare/tizen-webdriver-server-v1.1.5...tizen-webdriver-server-v2.0.0) (2024-08-06)
 
 
