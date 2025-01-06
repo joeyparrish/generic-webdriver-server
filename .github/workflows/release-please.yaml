@@ -8,8 +8,14 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+    outputs:
+      release_created: ${{ steps.release.outputs.release_created }}
+      tag_name: ${{ steps.release.outputs.tag_name }}
+      patch: ${{ steps.release.outputs.patch }}
 
     permissions:
+      # Required for OIDC ("trusted publishing")
+      id-token: write
       # Write to "contents" is needed to create a release
       contents: write
       # Write to pull-requests is needed to create and update the release PR
@@ -22,15 +28,41 @@ jobs:
         with:
           # These are the necessary parameters for releasing multiple packages
           # from a single repo.
-          command: manifest
-          config-file: .release-please-config.json
           manifest-file: .release-please-manifest.json
+          config-file: .release-please-config.json
           monorepo-tags: true
+
+  npm:
+    runs-on: ubuntu-latest
+    needs: release
+    if: needs.release.outputs.release_created
+    steps:
+      - name: Compute tag name
+        id: compute
+        if: needs.release.outputs.releases_created
+        run: |
+          # For a monorepo, there may be multiple tags, so outputs.tag_name is
+          # only used for releases of the root component.  To get the tag name
+          # generally, we need to check outputs.paths_released, and possibly
+          # use that to construct the tag name.  This seems like a major
+          # failing of release-please-action, which could have a simple output
+          # with an arbitrary tag name for situations like this.
+          json="${{ toJSON(needs.release.outputs) }}"
+          # This is a tag from the root component, if any.
+          tag_name=$(echo "$json" | jq -r .tag_name)
+          if [[ "$tag_name" == "" ]]; then
+            # We don't care about every single tag.  We just care about one tag
+            # so we can check out the appropriate code from the repo.  So grab
+            # path [0].
+            path=$(echo "$json" | jq -r .paths_released[0])
+            tag_name=$(echo "$json" | jq -r ".$path--tag_name")
+          fi
+          echo "tag_name=$tag_name" >> $GITHUB_OUTPUT
 
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          ref: refs/tags/${{ steps.release.outputs.tag_name }}
+          ref: refs/tags/${{ steps.compute.outputs.tag_name }}
           persist-credentials: false
         if: steps.release.outputs.releases_created
 
@@ -38,8 +70,14 @@ jobs:
         if: steps.release.outputs.releases_created
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          # NOTE: OIDC fails with node less than 24.
+          node-version: 24
           registry-url: 'https://registry.npmjs.org'
+
+      # NOTE: OIDC fails with npm less than 11.5.1.
+      - name: Update npm
+        run: sudo npm install -g npm@11.7
+        if: ${{ steps.release.outputs.release_created }}
 
       - name: Publish all changed packages
         if: steps.release.outputs.releases_created
@@ -72,10 +110,13 @@ jobs:
             pushd "$i"
 
             npm ci
-            npm publish
+
+            # NOTE: OIDC fails if the repository URL doesn't match package.json.
+            npm pkg set repository.url=https://github.com/${{ github.repository }}
+
+            # NOTE: --access public is required for scoped forks.
+            npm publish --access public
 
             popd
             set +e
           done
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
