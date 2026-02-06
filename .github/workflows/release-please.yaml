@@ -61,7 +61,7 @@ jobs:
           # to construct the key to the tag name.  This seems like a major
           # failing of release-please-action, which could have a simple output
           # with an arbitrary tag name for situations like this.
-          json='${{ needs.release.all_outputs }}'
+          json='${{ needs.release.outputs.all_outputs }}'
 
           # We don't care about every single tag.  We just care about one tag
           # so we can check out the appropriate code from the repo.  So grab
