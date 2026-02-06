@@ -1,5 +1,5 @@
 {
-  "name": "chromeos-webdriver-server",
+  "name": "@joeyparrish/chromeos-webdriver-server-staging",
   "description": "A WebDriver server that pushes URLs to ChromeOS devices, built on generic-webdriver-server.",
   "version": "1.0.4",
   "homepage": "https://github.com/shaka-project/generic-webdriver-server",

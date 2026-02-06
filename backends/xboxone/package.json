@@ -1,5 +1,5 @@
 {
-  "name": "xbox-one-webdriver-server",
+  "name": "@joeyparrish/xbox-one-webdriver-server-staging",
   "description": "An Xbox One WebDriver server that pushes URLs to Xbox One devices, built on generic-webdriver-server.",
   "version": "1.0.5",
   "homepage": "https://github.com/shaka-project/generic-webdriver-server",
