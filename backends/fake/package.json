@@ -1,5 +1,5 @@
 {
-  "name": "fake-webdriver-server",
+  "name": "@joeyparrish/fake-webdriver-server-staging",
   "description": "A fake WebDriver server that does nothing, built on generic-webdriver-server.",
   "version": "1.0.2",
   "private": true,
