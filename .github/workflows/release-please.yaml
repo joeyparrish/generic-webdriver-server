@@ -68,11 +68,15 @@ jobs:
           # the first path.  Note that the paths_released field is itself a
           # JSON-encoded string.
           all_paths_json=$(echo "$json" | jq -r .paths_released)
-          path=$(echo "$all_paths_json" | jq -r .[0])
+          echo "All released paths: $all_paths_json"
 
-          tag_name=$(echo "$json" | jq -r ".$path--tag_name")
-          echo "tag_name=$tag_name" >> $GITHUB_OUTPUT
+          path=$(echo "$all_paths_json" | jq -r .[0])
+          echo "Chosen path for tag: $path"
+
+          tag_name=$(echo "$json" | jq -r ".[\"$path--tag_name\"]")
           echo "Computed tag name for checkout: $tag_name"
+
+          echo "tag_name=$tag_name" >> $GITHUB_OUTPUT
 
       - name: Checkout code
         uses: actions/checkout@v4
