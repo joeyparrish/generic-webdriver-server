@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.6](https://github.com/joeyparrish/generic-webdriver-server/compare/generic-webdriver-server-staging-v1.1.5...generic-webdriver-server-staging-v1.1.6) (2026-02-06)
+
+
+### Bug Fixes
+
+* Await session closure on shutdown ([#45](https://github.com/joeyparrish/generic-webdriver-server/issues/45)) ([b05dfd0](https://github.com/joeyparrish/generic-webdriver-server/commit/b05dfd023960fe5a8f0bfbe38dfe714f3893ac76)), closes [#44](https://github.com/joeyparrish/generic-webdriver-server/issues/44)
+* Override allstar settings for binaries ([#68](https://github.com/joeyparrish/generic-webdriver-server/issues/68)) ([73bae14](https://github.com/joeyparrish/generic-webdriver-server/commit/73bae14ae4cc51984533e6c0e04ec060089bdb81)), closes [#67](https://github.com/joeyparrish/generic-webdriver-server/issues/67)
+
 ## [1.1.5](https://github.com/shaka-project/generic-webdriver-server/compare/generic-webdriver-server-v1.1.4...generic-webdriver-server-v1.1.5) (2023-09-11)
 
 
