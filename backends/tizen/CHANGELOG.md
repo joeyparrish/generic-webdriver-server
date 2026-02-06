@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.2](https://github.com/joeyparrish/generic-webdriver-server/compare/tizen-webdriver-server-staging-v2.0.1...tizen-webdriver-server-staging-v2.0.2) (2026-02-06)
+
+
+### Bug Fixes
+
+* **ci:** Remove "clean git" check ([c028fb2](https://github.com/joeyparrish/generic-webdriver-server/commit/c028fb2dd908ed33034543a67c54e52e82619794))
+
 ## [2.0.1](https://github.com/joeyparrish/generic-webdriver-server/compare/tizen-webdriver-server-staging-v2.0.0...tizen-webdriver-server-staging-v2.0.1) (2026-02-06)
 
 
