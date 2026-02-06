@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.6](https://github.com/joeyparrish/generic-webdriver-server/compare/xbox-one-webdriver-server-staging-v1.0.5...xbox-one-webdriver-server-staging-v1.0.6) (2026-02-06)
+
+
+### Bug Fixes
+
+* **not-a-fix:** Bump copyright years ([78b0a7b](https://github.com/joeyparrish/generic-webdriver-server/commit/78b0a7bff1c489d0d1fe54e60b7e1551fd327e8c))
+
 ## [1.0.5](https://github.com/shaka-project/generic-webdriver-server/compare/xbox-one-webdriver-server-v1.0.4...xbox-one-webdriver-server-v1.0.5) (2024-12-20)
 
 
