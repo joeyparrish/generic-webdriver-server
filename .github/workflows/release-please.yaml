@@ -34,8 +34,17 @@ jobs:
       - name: Bundle release outputs
         id: bundle-outputs
         run: |
+          # Capture all outputs from release-please as JSON.
           json='${{ toJSON(steps.release.outputs) }}'
+
+          # GITHUB_OUTPUT seems to get confused if there are newlines in the
+          # value, so compact it with jq.
+          json=$(( echo "$json" | jq -c .))
+
+          # Write this string to the output
           echo "all_outputs=$json" >> $GITHUB_OUTPUT
+
+          # And pretty-print it to the log
           echo "$json" | jq .
 
   npm:
