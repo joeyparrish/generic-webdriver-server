@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.5](https://github.com/joeyparrish/generic-webdriver-server/compare/chromeos-webdriver-server-staging-v1.0.4...chromeos-webdriver-server-staging-v1.0.5) (2026-02-06)
+
+
+### Bug Fixes
+
+* **not-a-fix:** Bump copyright years ([32824ea](https://github.com/joeyparrish/generic-webdriver-server/commit/32824ea7c6d22e14cf6931b3c018fdc394e8e618))
+
 ## [1.0.4](https://github.com/shaka-project/generic-webdriver-server/compare/chromeos-webdriver-server-v1.0.3...chromeos-webdriver-server-v1.0.4) (2024-05-15)
 
 
