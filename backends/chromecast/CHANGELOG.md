@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.1](https://github.com/joeyparrish/generic-webdriver-server/compare/chromecast-webdriver-server-staging-v2.0.0...chromecast-webdriver-server-staging-v2.0.1) (2026-02-06)
+
+
+### Bug Fixes
+
+* **not-a-fix:** Bump copyright years ([78b0a7b](https://github.com/joeyparrish/generic-webdriver-server/commit/78b0a7bff1c489d0d1fe54e60b7e1551fd327e8c))
+
 ## [2.0.0](https://github.com/shaka-project/generic-webdriver-server/compare/chromecast-webdriver-server-v1.3.0...chromecast-webdriver-server-v2.0.0) (2024-05-18)
 
 
