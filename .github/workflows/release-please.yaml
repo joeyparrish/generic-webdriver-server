@@ -10,8 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       paths_released: ${{ steps.release.outputs.paths_released }}
-      tag_name: ${{ steps.release.outputs.tag_name }}
-      patch: ${{ steps.release.outputs.patch }}
+      all_outputs: ${{ toJSON(steps.release.outputs) }}
 
     permissions:
       # Required for OIDC ("trusted publishing")
@@ -51,7 +50,7 @@ jobs:
           # use that to construct the tag name.  This seems like a major
           # failing of release-please-action, which could have a simple output
           # with an arbitrary tag name for situations like this.
-          json='${{ toJSON(needs.release.outputs) }}'
+          json='${{ toJSON(needs.release.all_outputs) }}'
           # This is a tag from the root component, if any.
           tag_name=$(echo "$json" | jq -r .tag_name)
           if [[ "$tag_name" == "" ]]; then
