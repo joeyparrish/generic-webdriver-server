@@ -35,7 +35,7 @@ jobs:
         id: bundle-outputs
         run: |
           json='${{ toJSON(steps.release.outputs) }}'
-          echo "all_outputs=$json" >> $GITHUB_OUTPUTS
+          echo "all_outputs=$json" >> $GITHUB_OUTPUT
           echo "$json" | jq .
 
   npm:
