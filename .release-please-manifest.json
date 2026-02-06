@@ -1,5 +1,5 @@
 {
-  "base": "1.1.6",
+  "base": "1.1.7",
   "backends/chromecast": "2.0.1",
   "backends/chromeos": "1.0.6",
   "backends/tizen": "2.0.1",
