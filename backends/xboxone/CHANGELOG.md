@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.7](https://github.com/joeyparrish/generic-webdriver-server/compare/xbox-one-webdriver-server-staging-v1.0.6...xbox-one-webdriver-server-staging-v1.0.7) (2026-02-06)
+
+
+### Bug Fixes
+
+* **ci:** Remove "clean git" check ([c028fb2](https://github.com/joeyparrish/generic-webdriver-server/commit/c028fb2dd908ed33034543a67c54e52e82619794))
+
 ## [1.0.6](https://github.com/joeyparrish/generic-webdriver-server/compare/xbox-one-webdriver-server-staging-v1.0.5...xbox-one-webdriver-server-staging-v1.0.6) (2026-02-06)
 
 
