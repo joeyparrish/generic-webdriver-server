@@ -39,7 +39,7 @@ jobs:
 
           # GITHUB_OUTPUT seems to get confused if there are newlines in the
           # value, so compact it with jq.
-          json=$(( echo "$json" | jq -c .))
+          json=$( echo "$json" | jq -c . )
 
           # Write this string to the output
           echo "all_outputs=$json" >> $GITHUB_OUTPUT
