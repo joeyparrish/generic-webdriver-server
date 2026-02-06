@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.7](https://github.com/joeyparrish/generic-webdriver-server/compare/generic-webdriver-server-staging-v1.1.6...generic-webdriver-server-staging-v1.1.7) (2026-02-06)
+
+
+### Bug Fixes
+
+* **ci:** Remove "clean git" check ([c028fb2](https://github.com/joeyparrish/generic-webdriver-server/commit/c028fb2dd908ed33034543a67c54e52e82619794))
+
 ## [1.1.6](https://github.com/joeyparrish/generic-webdriver-server/compare/generic-webdriver-server-staging-v1.1.5...generic-webdriver-server-staging-v1.1.6) (2026-02-06)
 
 
