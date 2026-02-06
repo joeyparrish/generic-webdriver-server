@@ -9,7 +9,7 @@ jobs:
   release:
     runs-on: ubuntu-latest
     outputs:
-      releases_created: ${{ steps.release.outputs.releases_created }}
+      paths_released: ${{ steps.release.outputs.paths_released }}
       tag_name: ${{ steps.release.outputs.tag_name }}
       patch: ${{ steps.release.outputs.patch }}
 
@@ -32,10 +32,15 @@ jobs:
           config-file: .release-please-config.json
           include-component-in-tag: true
 
+      - name: Debug release outputs
+        run: |
+          json='${{ toJSON(steps.release.outputs) }}'
+          echo "$json" | jq .
+
   npm:
     runs-on: ubuntu-latest
     needs: release
-    if: needs.release.outputs.releases_created
+    if: needs.release.outputs.paths_released != '[]'
     steps:
       - name: Compute tag name
         id: compute
@@ -46,7 +51,7 @@ jobs:
           # use that to construct the tag name.  This seems like a major
           # failing of release-please-action, which could have a simple output
           # with an arbitrary tag name for situations like this.
-          json="${{ toJSON(needs.release.outputs) }}"
+          json='${{ toJSON(needs.release.outputs) }}'
           # This is a tag from the root component, if any.
           tag_name=$(echo "$json" | jq -r .tag_name)
           if [[ "$tag_name" == "" ]]; then
@@ -57,6 +62,7 @@ jobs:
             tag_name=$(echo "$json" | jq -r ".$path--tag_name")
           fi
           echo "tag_name=$tag_name" >> $GITHUB_OUTPUT
+          echo "Computed tag name for checkout: $tag_name"
 
       - name: Checkout code
         uses: actions/checkout@v4
