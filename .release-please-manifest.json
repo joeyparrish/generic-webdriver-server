@@ -1,7 +1,7 @@
 {
-  "base": "1.1.5",
-  "backends/chromecast": "2.0.0",
-  "backends/chromeos": "1.0.4",
-  "backends/tizen": "2.0.0",
-  "backends/xboxone": "1.0.5"
+  "base": "1.1.6",
+  "backends/chromecast": "2.0.2",
+  "backends/chromeos": "1.0.7",
+  "backends/tizen": "2.0.1",
+  "backends/xboxone": "1.0.6"
 }
